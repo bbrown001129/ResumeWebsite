@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+def homeAction(request):
+    context = {}
+    return render(request,'ResumeWebsite/index.html', context)
