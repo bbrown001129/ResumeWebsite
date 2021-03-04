@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="CSS/base.css">
+        <script src="JS/index.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -63,6 +64,7 @@
                 <div class="container-fluid">
                     <div class="row jumbotron">
                         <div class="container">
+                            <!-- Welcome -->
                             <h3>Welcome</h3>
                             <div class="row justify-content-center">
                                 <div class="col-10">
@@ -84,10 +86,12 @@
                                     <img src="images/headshot.jpg" width="100%" id="headshot"> 
                                 </div>
                             </div>
+
+                            <!-- Skills -->
                             <h3>Skills</h3>
                             <div class="row justify-content-center" id="skills">
                                 <div class="col-2">
-                                    <h5>Java</h5>
+                                    <h5>Java</h5></a>
                                 </div>
                                 <div class="col-2">
                                     <h5>Python</h5>
@@ -110,6 +114,8 @@
                 </div>
             </div>
         </div>
+
+        
 
     <!-- Education -->
     
@@ -193,7 +199,7 @@
             <div class="row">
                 <div class="col-10">
                     
-                    <h3>Harris Corporation (now L3Harris))</h3>
+                    <h3>Harris Corporation (now L3Harris)</h3>
                     <h5>Integration and Test Engineer</h5>
                     <ul>
                         <li>Assured that all the hardware in the satellite system worked after being properly cabled and powered.</li>
@@ -259,51 +265,128 @@
         </div>
         <h3>Completed Projects</h3>
         <div class="row">
-            <div class="col-4">
-                <img src="images/site-image.PNG" width="100%">
-                <h5>Personal Website</h5>
-                <p>
-                    Utilities: HTML | CSS | Bootstrap
-                </p>
-            </div>
-            <div class="col-4">
-                <img src="images/card-arcade.PNG" width="100%">
 
-                <h5>Virtual Card Game Website </h5>
-                <p>
-                    Utilities: HTML | CSS | Bootstrap | Python | Django | JavaScript
-                </p>
-            </div>
             <div class="col-4">
-                <img src="images/nano-blog.PNG" width="100%">
-                <h5>Interactive Blogging Website</h5>
-                <p>
-                    Utilities: HTML | CSS | Python | Django | JavaScript
-                </p>
+                <!-- Personal Website Link -->
+                <a onclick="viewPopUp('javaPopUp')">
+                    <img src="images/site-image.PNG" width="100%">
+                    <h5>Personal Website</h5>
+                    <p>
+                        Utilities: HTML | CSS | Bootstrap
+                    </p>
+                </a>
+
+                <!-- Personal Website Description -->
+                <div class="hidden-element" id="javaPopUp">
+                    <img src="images/site-image.PNG" width="100%">
+                    <h1>
+                        Full Description Coming Soon!
+                    </h1>
+                    <button onclick="viewPopUp('javaPopUp')" type="button" class="btn btn-danger">Close</button>
+                </div>   
+            </div>
+
+            <div class="col-4">
+                <!-- Card Arcade Link -->
+                <a onclick="viewPopUp('cardArcade')">
+                    <img src="images/card-arcade.PNG" width="100%">
+                    <h5>Virtual Card Game Website </h5>
+                    <p>
+                        Utilities: HTML | CSS | Bootstrap | Python | Django | JavaScript
+                    </p>
+                </a>
                 
+                <!-- Card Arcade Description -->
+                <div class="hidden-element" id="cardArcade">
+                    <img src="images/card-arcade.PNG" width="100%">
+                    <h1>
+                        Full Description Coming Soon!
+                    </h1>
+                        <button onclick="viewPopUp('cardArcade')" type="button" class="btn btn-danger">Close</button>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <!-- Interactive Blogging Website Link -->
+                <a onclick="viewPopUp('nanoBlog')">
+                    <img src="images/nano-blog.PNG" width="100%">
+                    <h5>Interactive Blogging Website</h5>
+                    <p>
+                        Utilities: HTML | CSS | Python | Django | JavaScript
+                    </p>
+                </a>
+
+                <!-- Interactive Blogging Website Description -->
+                <div class="hidden-element" id="nanoBlog">
+                    <img src="images/nano-blog.PNG" width="100%">
+                    <h1>
+                        Full Description Coming Soon!
+                    </h1>
+                    <button onclick="viewPopUp('nanoBlog')" type="button" class="btn btn-danger">Close</button>
+                </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-4">
-                <img src="images/heap-image.png" width="100%">
-                <h5>Dynamic Heap Allocator</h5>
-                <p>
-                    Utilities: C
-                </p>
+                <!-- Card Arcade Link -->
+                <a onclick="viewPopUp('heapDynamic')">
+                    <img src="images/heap-image.png" width="100%">
+                    <h5>Dynamic Heap Allocator</h5>
+                    <p>
+                        Utilities: C
+                    </p>
+                </a>
+
+                <!-- Card Arcade Description -->
+                <div class="hidden-element" id="heapDynamic">
+                    <img src="images/heap-image.png" width="40%">
+                    <h1>
+                        Full Description Coming Soon!
+                    </h1>
+                    <button onclick="viewPopUp('heapDynamic')" type="button" class="btn btn-danger">Close</button>
+                </div>
             </div>
+
             <div class="col-4">
-                <img src="images/directory.PNG" width="100%">
-                <h5>Student Directory Search Application with GUI</h5>
-                <p>
-                    Utilities: Java
-                </p>
+                <!-- Student Directory Description Link-->
+                <a onclick="viewPopUp('directory')">
+                    <img src="images/directory.PNG" width="100%">
+                    <h5>Student Directory Search Application with GUI</h5>
+                    <p>
+                        Utilities: Java
+                    </p>
+                </a>
+
+                <!-- Student Directory Description -->
+                <div class="hidden-element" id="directory">
+                    <img src="images/directory.PNG" width="40%">
+                    <h1>
+                        Full Description Coming Soon!
+                    </h1>
+                    <button onclick="viewPopUp('directory')" type="button" class="btn btn-danger">Close</button>
+                </div>
             </div>
+
+
             <div class="col-4">
-                <img src="images/Whack-mole.PNG" width="100%">
-                <h5>Multi-Threaded Whack-A-Mole Game</h5>
-                <p>
-                    Utilities: Java
-                </p>
+                <!-- Whack-A-Mole Description -->
+                <a onclick="viewPopUp('whackMole')">
+                    <img src="images/Whack-mole.PNG" width="100%">
+                    <h5>Multi-Threaded Whack-A-Mole Game</h5>
+                    <p>
+                        Utilities: Java
+                    </p>
+                </a>
+
+                <!-- Whack-A-Mole Description -->
+                <div class="hidden-element" id="whackMole">
+                    <img src="images/Whack-mole.PNG" width="40%">
+                    <h1>
+                        Full Description Coming Soon!
+                    </h1>
+                    <button onclick="viewPopUp('whackMole')" type="button" class="btn btn-danger">Close</button>
+                </div>
             </div>
             
         </div>
